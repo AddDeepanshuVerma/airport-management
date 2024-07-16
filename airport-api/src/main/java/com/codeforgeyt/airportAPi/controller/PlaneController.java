@@ -1,6 +1,6 @@
-package com.codeforgeyt.airportapi.controller;
+package com.codeforgeyt.airportAPi.controller;
 
-import com.codeforgeyt.airportapi.service.PlaneService;
+import com.codeforgeyt.airportAPi.service.PlaneService;
 import com.codeforgeyt.airportcore.model.PlaneDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,5 +20,10 @@ public class PlaneController {
     public ResponseEntity<PlaneDto> getPlane(){
         PlaneDto planeDto = planeService.getPlane();
         return new ResponseEntity<>(planeDto, HttpStatus.OK);
+    }
+
+    @RequestMapping
+    public String airportApi() {
+        return "Welcome sir !!!";
     }
 }
